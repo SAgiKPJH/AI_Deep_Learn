@@ -2,7 +2,7 @@
 docker build -t juhyung1021/deep_learning_from_scratch .
 
 # docker run
-docker run -it --gpus all --name deep_learning_from_scratch -p 18090:8080 -d juhyung1021/deep_learning_from_scratch:latest
+docker run -it --gpus all --name deep_learning_from_scratch -p 18091:8080 -d juhyung1021/deep_learning_from_scratch:latest
 
 # git Upload
 
