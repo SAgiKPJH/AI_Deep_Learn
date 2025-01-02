@@ -1,0 +1,21 @@
+# docker build
+docker build -t juhyung1021/deep_learning_from_scratch .
+
+# docker run
+docker run -it --gpus all --name deep_learning_from_scratch -p 18090:8080 -d juhyung1021/deep_learning_from_scratch:latest
+
+# git Upload
+
+### Stash
+git add .
+
+### Commamt
+git commit -m "Commit message"
+
+### push
+git push origin main
+
+
+### miniconda install
+- https://docs.anaconda.com/miniconda/install/#quick-command-line-install
+- 참조 사이트 : https://ebbnflow.tistory.com/340
