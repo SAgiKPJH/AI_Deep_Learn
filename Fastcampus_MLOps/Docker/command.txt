@@ -1,0 +1,21 @@
+# docker build
+docker build -t juhyung1021/fastcampus_mlops .
+
+# docker run
+docker run -it --gpus all --name fastcampus_mlops -p 18092:8080 -d juhyung1021/fastcampus_mlops:latest
+
+# git Upload
+
+### Stash
+git add .
+
+### Commamt
+git commit -m "Commit message"
+
+### push
+git push origin main
+
+
+### miniconda install
+- https://docs.anaconda.com/miniconda/install/#quick-command-line-install
+- 참조 사이트 : https://ebbnflow.tistory.com/340
