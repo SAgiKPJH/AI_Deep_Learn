@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu20.04
+FROM nvidia/cuda:12.6.3-cudnn-devel-ubuntu20.04
 
 WORKDIR /workspace
 
@@ -7,7 +7,6 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     build-essential \
     curl \
-    git \
     wget \
     vim \
     gcc \
@@ -19,14 +18,16 @@ RUN apt-get update && \
     && conda update conda \
     && conda clean --all --yes
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+COPY . .
+RUN pip install -r dockerfile-requirements-python.txt \
+    && pip install --upgrade jupyter_client
 
 # Install VSCode
 RUN curl -fsSL https://code-server.dev/install.sh | sh
+# RUN code-server --install-extension ms-python.python
+RUN code-server --install-extension ms-python.python \
+ && code-server --install-extension ms-toolsai.jupyter
 
-RUN code-server --install-extension ms-python.python && \
-    code-server --install-extension ms-toolsai.jupyter
 
 RUN echo "root:root" | chpasswd
 
@@ -35,7 +36,5 @@ RUN mkdir -p ~/.config/code-server && \
     sed -i 's|password:.*|password: root|g' ~/.config/code-server/config.yaml
 
 EXPOSE 8080
-
-RUN rm -rf /workspace/* && git clone https://github.com/SAgiKPJH/AI_Deep_Learn.git /workspace
 
 CMD code-server --bind-addr 0.0.0.0:8080 .
