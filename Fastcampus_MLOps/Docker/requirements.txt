@@ -2,3 +2,7 @@ torch
 torchvision
 numpy
 matplotlib
+pandas
+openpyxl
+pyarrow
+dask
