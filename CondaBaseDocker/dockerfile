@@ -1,4 +1,4 @@
-FROM juhyung1021/condadocker-base
+FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu20.04
 
 WORKDIR /workspace
 
@@ -15,12 +15,15 @@ RUN apt-get update && \
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
     && rm -rf /tmp/miniconda.sh \
-    && conda install -y python=3.11 ipykernel \
+    && conda install -y python=3.11 ipykernel python-graphviz \
     && conda update conda \
     && conda clean --all --yes
 
 # Install VSCode
 RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+RUN code-server --install-extension ms-python.python && \
+    code-server --install-extension ms-toolsai.jupyter
 
 RUN echo "root:root" | chpasswd
 
@@ -30,6 +33,6 @@ RUN mkdir -p ~/.config/code-server && \
 
 EXPOSE 8080
 
-RUN git clone https://github.com/SAgiKPJH/AI_Deep_Learn.git /workspace
+RUN rm -rf /workspace/*
 
 CMD code-server --bind-addr 0.0.0.0:8080 .

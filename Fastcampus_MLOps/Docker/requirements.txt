@@ -2,3 +2,12 @@ torch
 torchvision
 numpy
 matplotlib
+pandas
+openpyxl
+pyarrow
+dask
+datasets
+transformers
+scikit-learn
+scikit-image
+seaborn
