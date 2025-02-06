@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.2.2-cudnn8-devel-ubuntu20.04
+FROM juhyung1021/condadocker-base
 
 WORKDIR /workspace
 
