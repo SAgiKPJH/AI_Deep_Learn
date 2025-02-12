@@ -11,6 +11,7 @@ RUN apt-get update && \
     wget \
     vim \
     gcc \
+    openssl \
     && rm -rf /var/lib/apt/lists/* \
     && curl -sSL https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -o /tmp/miniconda.sh \
     && bash /tmp/miniconda.sh -bfp /usr/local \
@@ -27,9 +28,17 @@ RUN code-server --install-extension ms-python.python && \
 
 RUN echo "root:root" | chpasswd
 
+### Create SSL certificate (For HTTPS)
+RUN openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+    -keyout /etc/ssl/private/cert.key \
+    -out /etc/ssl/certs/cert.crt \
+    -subj "/C=US/ST=State/L=City/O=Organization/OU=Department/CN=localhost"
+
 RUN mkdir -p ~/.config/code-server && \
     echo "password: root" > ~/.config/code-server/config.yaml && \
-    sed -i 's|password:.*|password: root|g' ~/.config/code-server/config.yaml
+    echo "bind-addr: 0.0.0.0:8080" >> ~/.config/code-server/config.yaml && \
+    echo "cert: /etc/ssl/certs/cert.crt" >> ~/.config/code-server/config.yaml && \
+    echo "cert-key: /etc/ssl/private/cert.key" >> ~/.config/code-server/config.yaml
 
 EXPOSE 8080
 
