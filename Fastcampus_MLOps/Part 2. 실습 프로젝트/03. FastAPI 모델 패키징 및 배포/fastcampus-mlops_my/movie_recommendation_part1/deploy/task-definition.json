@@ -1,0 +1,18 @@
+{
+  "family": "fast-campus-task",
+  "containerDefinitions": [
+    {
+      "name": "web",
+      "image": "969400485833.dkr.ecr.ap-northeast-2.amazonaws.com/fastcampus_test:0.0.1",
+      "essential": true,
+      "memory": 500,
+      "cpu": 10,
+      "portMappings": [
+        {
+          "containerPort": 8000,
+          "hostPort": 8000
+        }
+      ]
+    }
+  ]
+}
