@@ -1,9 +1,6 @@
 # docker build
 docker build -t juhyung1021/condadocker-base .
 
-## Test
-docker run -it --gpus all --name condadocker-base -p 18089:8080 -d juhyung1021/condadocker-base:latest
-
 # git Upload
 
 ### Stash
