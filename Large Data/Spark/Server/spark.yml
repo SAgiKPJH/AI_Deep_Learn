@@ -13,20 +13,14 @@ services:
     networks:
       - spark-net
 
-  spark-worker-1:
+  spark-worker:
     image: bitnami/spark:latest
-    container_name: spark-worker-1
+    depends_on:
+      - spark-master
     environment:
       - SPARK_MODE=worker
-      - SPARK_MASTER_URL=spark://spark-master:7077
-    networks:
-      - spark-net
-
-  spark-worker-2:
-    image: bitnami/spark:latest
-    container_name: spark-worker-2
-    environment:
-      - SPARK_MODE=worker
+      - SPARK_WORKER_CORES=1
+      - SPARK_WORKER_MEMORY=2g
       - SPARK_MASTER_URL=spark://spark-master:7077
     networks:
       - spark-net
