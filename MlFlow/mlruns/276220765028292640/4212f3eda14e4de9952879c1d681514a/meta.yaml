@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/4212f3eda14e4de9952879c1d681514a/artifacts
+end_time: 1750760636154
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 4212f3eda14e4de9952879c1d681514a
+run_name: Random Forest Classifier
+run_uuid: 4212f3eda14e4de9952879c1d681514a
+start_time: 1750760631259
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

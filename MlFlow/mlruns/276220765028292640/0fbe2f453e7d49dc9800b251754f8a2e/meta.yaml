@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/0fbe2f453e7d49dc9800b251754f8a2e/artifacts
+end_time: 1750760644312
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 0fbe2f453e7d49dc9800b251754f8a2e
+run_name: Session Initialized 95e5
+run_uuid: 0fbe2f453e7d49dc9800b251754f8a2e
+start_time: 1750760575777
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

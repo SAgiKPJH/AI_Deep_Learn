@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/772fd04c82784551930d7b6b1c870cc0/artifacts
+end_time: 1750760639564
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 772fd04c82784551930d7b6b1c870cc0
+run_name: Linear Discriminant Analysis
+run_uuid: 772fd04c82784551930d7b6b1c870cc0
+start_time: 1750760639168
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

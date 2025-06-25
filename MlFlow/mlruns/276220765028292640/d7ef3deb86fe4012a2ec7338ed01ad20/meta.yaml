@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/d7ef3deb86fe4012a2ec7338ed01ad20/artifacts
+end_time: 1750760642708
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: d7ef3deb86fe4012a2ec7338ed01ad20
+run_name: Dummy Classifier
+run_uuid: d7ef3deb86fe4012a2ec7338ed01ad20
+start_time: 1750760642406
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

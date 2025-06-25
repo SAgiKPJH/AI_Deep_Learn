@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/67b6aff681f6474b8ae79ce80e40b9e3/artifacts
+end_time: 1750760638501
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 67b6aff681f6474b8ae79ce80e40b9e3
+run_name: Decision Tree Classifier
+run_uuid: 67b6aff681f6474b8ae79ce80e40b9e3
+start_time: 1750760638191
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''
