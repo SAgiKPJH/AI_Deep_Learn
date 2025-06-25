@@ -313,3 +313,5 @@ TestRecipe/Mirero.MLS.TestModelRecipe.Wafer/Dll
 Fastcampus_MLOps/Python 기초/Module/my_env
 Fastcampus_MLOps/Python 기초/기본/Module/my_env
 Large Data/Spark/spark-env
+.venv
+.mlflow
