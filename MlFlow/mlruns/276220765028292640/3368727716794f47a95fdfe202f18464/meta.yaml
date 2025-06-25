@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/3368727716794f47a95fdfe202f18464/artifacts
+end_time: 1750760637609
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 3368727716794f47a95fdfe202f18464
+run_name: CatBoost Classifier
+run_uuid: 3368727716794f47a95fdfe202f18464
+start_time: 1750760637279
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/677ee5aaab0041ff8bae4956fa45e35a/artifacts
+end_time: 1750760640883
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 677ee5aaab0041ff8bae4956fa45e35a
+run_name: Ridge Classifier
+run_uuid: 677ee5aaab0041ff8bae4956fa45e35a
+start_time: 1750760640599
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''

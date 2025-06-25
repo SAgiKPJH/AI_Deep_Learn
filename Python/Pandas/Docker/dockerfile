@@ -1,0 +1,24 @@
+FROM juhyung1021/condadocker-base
+
+WORKDIR /workspace
+
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+
+# Install VSCode
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
+RUN code-server --install-extension ms-python.python && \
+    code-server --install-extension ms-toolsai.jupyter
+
+RUN echo "root:root" | chpasswd
+
+RUN mkdir -p ~/.config/code-server && \
+    echo "password: root" > ~/.config/code-server/config.yaml && \
+    sed -i 's|password:.*|password: root|g' ~/.config/code-server/config.yaml
+
+EXPOSE 8080
+
+RUN rm -rf /workspace/* && git clone https://github.com/SAgiKPJH/AI_Deep_Learn.git /workspace
+
+CMD code-server --bind-addr 0.0.0.0:8080 .

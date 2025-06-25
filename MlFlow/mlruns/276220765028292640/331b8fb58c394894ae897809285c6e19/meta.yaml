@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Sagi_JJU%20D/MlFlow/mlruns/276220765028292640/331b8fb58c394894ae897809285c6e19/artifacts
+end_time: 1750760642275
+experiment_id: '276220765028292640'
+lifecycle_stage: active
+run_id: 331b8fb58c394894ae897809285c6e19
+run_name: Naive Bayes
+run_uuid: 331b8fb58c394894ae897809285c6e19
+start_time: 1750760641991
+status: 3
+user_id: juhyu
+tags: []
+source_type: 4
+source_name: ''
+entry_point_name: ''
+source_version: ''
