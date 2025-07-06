@@ -1,0 +1,14 @@
+# Command 접근
+ssh juya1021@172.30.1.30 -p 12233
+
+# Docker 실행
+docker-compose up -d
+
+# Grafana 접속
+http://juya1021.ddns.net:5110/login
+http://172.30.1.30:5110/login
+
+
+```py
+mlflow.set_tracking_uri("http://192.168.100.185:5000")
+```

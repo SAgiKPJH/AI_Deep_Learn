@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  tensorflow:
+    image: keras-mlflow:latest
+    build:
+      context: .
+    container_name: tensorflow_gpu
+    command: python "/workspace/example.py"
+    runtime: nvidia
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    volumes:
+      - "D:/Sagi_JJU D/Git_Fork/AI_Deep_Learn/MlFlow/Example:/workspace"
+    working_dir: /workspace
