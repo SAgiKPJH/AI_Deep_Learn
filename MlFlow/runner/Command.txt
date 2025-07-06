@@ -1,0 +1,16 @@
+# Test run
+docker run --gpus all -it --rm tensorflow/tensorflow:2.14.0-gpu python -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+
+# Test Bash
+docker run --gpus all -it --rm tensorflow/tensorflow:2.14.0-gpu /bin/bash
+
+
+# run
+
+docker-compose.yml 내의
+  - command: python "/workspace/mlflow/Keras Deeplearning/keas_dl_validation.py"
+  - volumes:
+      - "D:/Sagi_JJU D/MlFlow:/workspace"
+부분을 설정하고 실행
+docker compose up
+

@@ -9,6 +9,9 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import mlflow
 import mlflow.sklearn
 
+local_url = "file:///D:/Sagi_JJU D/MlFlow/.mlflow"
+server_url = "http://172.30.1.30:5110/"
+
 # 경고 무시
 warnings.filterwarnings("ignore")
 
@@ -24,12 +27,11 @@ def eval_metrics(actual, pred):
 
 if __name__ == "__main__":
     # 데이터 로드
-    wine_path = os.path.join("./", "wine_data_homework.csv")
-    data = pd.read_csv(wine_path)
+    data = pd.read_csv("wine_data_homework.csv")
 
     # MLflow 설정
-    mlflow.set_tracking_uri("file:///D:/Sagi_JJU D/MlFlow/.mlflow")
-    mlflow.set_experiment(experiment_name="MLOPS-Final-2512")
+    mlflow.set_tracking_uri(server_url)
+    mlflow.set_experiment(experiment_name="Wine Quality Prediction (Example)")
 
     # 학습/테스트 데이터 분리
     train, test = train_test_split(data, test_size=0.25)
